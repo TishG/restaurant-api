@@ -1,0 +1,24 @@
+{
+  "name": "restaurant-api",
+  "version": "1.0.0",
+  "description": "capstone project/application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TishG/restaurant-api.git"
+  },
+  "author": "LG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TishG/restaurant-api/issues"
+  },
+  "homepage": "https://github.com/TishG/restaurant-api#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
