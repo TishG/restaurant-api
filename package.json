@@ -18,11 +18,13 @@
   },
   "homepage": "https://github.com/TishG/restaurant-api#readme",
   "dependencies": {
+    "dotenv": "^6.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "request": "^2.88.0"
   },
   "devDependencies": {
+    "heroku": "^7.19.4",
     "jasmine": "^3.3.1"
   }
 }
