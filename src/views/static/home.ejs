@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%= title %></title>
+    <% include ./partials/head.ejs %>
   </head>
     <body>
-        <h1><%= message %></h1>
+        <% include ./partials/navbar.ejs %>
+
+        <form action="/results" method="GET">
+          <input type="text" placeholder="Enter a cuisine, ex: pizza, mexican, desserts, etc." name="">
+          <input type="text" placeholder="Enter a city." name="">
+          <input type="submit">
+        </form>
+        
+        <% include ./partials/baseScripts.ejs %>
     </body>
 </html>
