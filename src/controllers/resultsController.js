@@ -1,6 +1,21 @@
+const request = require("request");
+const zomatoUserKey = process.env.zomatoUserKey;
+
 module.exports = {
     results(req, res, next) {
-    let text = "Welcome to the Results page";
-      res.render("results", {text:text});
+      const entry = req.query.entry;
+      const enitity = req.query.entity;
+      const options = { 
+      url: `https://developers.zomato.com/api/v2.1/search?q=entity_locality%3D${entry}%3D`,
+      headers: 
+       { 'cache-control': 'no-cache',
+         'user-key': zomatoUserKey }
+        };
+      request(options, (err, response, body) => {
+          if(!err && response.statusCode == 200) {
+              const data = JSON.parse(body);
+              res.render('results', {data: data});
+          }
+      })
     }
   }

@@ -5,12 +5,25 @@
   </head>
     <body>
         <% include ./partials/navbar.ejs %>
-
+        <main id="home-search-container">
+            <div class="message-box container d-flex justify-content-center jumbotron">
+              <div class="welcome-message">
+                <h1>Welcome to Restaurant API</h1>
+                <p class="text-center text-secondary">Search for cuisines or restaurants in your area</p>
+              </div>
+              </div>
+          <div class="container d-flex justify-content-center">
         <form action="/results" method="GET">
-          <input type="text" placeholder="Enter a cuisine, ex: pizza, mexican, desserts, etc." name="">
-          <input type="text" placeholder="Enter a city." name="">
-          <input type="submit">
+          <select class="select-box text-secondary pl-1" required>
+            <option name="entity" value="locality">City</option>
+            <option name="entity" value="cuisines">Cuisine</option>
+          </select>
+          <input class="search-box pl-2" type="text" placeholder="Enter city or cuisine" name="entry">
+          <input class="submit" type="submit">
         </form>
+      </div>
+      </main>
+
         
         <% include ./partials/baseScripts.ejs %>
     </body>

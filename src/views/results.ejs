@@ -4,10 +4,30 @@
     <% include ./static/partials/head.ejs %>
   </head>
     <body>
-        <% include ./static/partials/navbar.ejs %>
-
-        <h1><%= text %></h1>
-        
+  <main>   
+      <% include ./static/partials/navbar.ejs %>
+<section class="back-button-and-results-length-container">
+      <p class="back-button m-3"><a href="/"><span class="fas fa-arrow-left fa-md"></span> Back</a></p>    
+      <p class="results-length d-flex justify-content-center text-white"><%=data['restaurants'].length %> results</p>
+</section> 
+<section class="results-container container d-flex justify-content-center">
+  <ul>
+  <% data['restaurants'].map(restaurant => { %>
+    <div style="background-color: #F6EAEC" class="card my-4">
+      <div class="container card-body mx-4 my-2">
+      <li class="restaurant-list">
+          <p class="restaurant-name"><%= restaurant['restaurant']['name'] %></p>
+          <p class="restaurant-address text-secondary"><%= restaurant['restaurant']['location']['address'] %></p>
+      </li>
+    </div>
+</div>
+  <% }) %>
+  </ul>
+</section>   
+<section class="search-again mt-0 pb-3">
+    <p class="m-1 ml-3 text-center"><a href="/"></span> Search Again</a></p>    
+</section> 
+</main> 
         <% include ./static/partials/baseScripts.ejs %>
     </body>
 </html>
