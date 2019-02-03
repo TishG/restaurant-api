@@ -5,14 +5,14 @@
   </head>
     <body>
         <% include ./partials/navbar.ejs %>
-        <main id="home-search-container">
-            <div class="message-box container d-flex justify-content-center jumbotron">
+        <main class="container-fluid" id="home-search-container">
+            <div class="message-box d-flex justify-content-center jumbotron">
               <div class="welcome-message">
                 <h1>Welcome to Restaurant API</h1>
                 <p class="text-center text-secondary">Search for cuisines or restaurants in your area</p>
               </div>
               </div>
-          <div class="container d-flex justify-content-center">
+          <div class="container px-3 search-form d-flex justify-content-center">
         <form action="/results" method="GET">
           <select class="select-box text-secondary pl-1" required>
             <option name="entity" value="locality">City</option>
@@ -21,7 +21,7 @@
           <input class="search-box pl-2" type="text" placeholder="Enter city or cuisine" name="entry">
           <input class="submit" type="submit">
         </form>
-      </div>
+    </div>
       </main>
 
         

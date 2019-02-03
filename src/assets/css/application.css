@@ -1,7 +1,4 @@
-/* main {
-    background-color: #FFC9B5;
-    margin: none;
-} */
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 
 main {
     background-image: url(https://images.unsplash.com/photo-1520066975094-c321ec00637d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
@@ -11,20 +8,21 @@ main {
 }
 
 .welcome-message h1 {
-    /* color: #710316; */
     color: #B34257;
     filter: brightness(100%)
 }
 
 nav {
-    /* background-color: #DEABA7; */
+    background-color: #DEABA7;
     background-color: #681020;
     font-size: 18px;
 }
 
 .navbar-brand {
-    font-size: 24px;
-    letter-spacing: 1px;
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-family: 'Great Vibes', cursive; 
+    font-weight: bold;
 }
 
 .navbar-brand, .nav-item {
@@ -43,16 +41,21 @@ nav {
 
 .search-box {
     height: 35px;
+    max-height: 355px;
     width: 400px;
+    max-width: 400px;
 }
 
 .select-box {
     height: 35px;
+    max-height: 35px;
     width: 100px;
+    max-width: 100px;
 }
 
 .submit {
     height: 35px;
+    max-height:35px;
     background-color: lightgray;
     color: #A31932;
     border: 1px solid darkgray;
@@ -77,7 +80,8 @@ nav {
 }
 
 .search-again a {
-    color: #B34257;
+    /* color: #B34257; */
+    color: lightgray;
     font-weight: bold;
 }
 
