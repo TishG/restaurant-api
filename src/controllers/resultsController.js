@@ -4,9 +4,9 @@ const zomatoUserKey = process.env.zomatoUserKey;
 module.exports = {
     results(req, res, next) {
       const entry = req.query.entry;
-      const enitity = req.query.entity;
+      const entity = req.query.entity;
       const options = { 
-      url: `https://developers.zomato.com/api/v2.1/search?q=entity_locality%3D${entry}%3D`,
+      url: `https://developers.zomato.com/api/v2.1/search?q=entity_${entity}%3D${entry}%3D`,
       headers: 
        { 'cache-control': 'no-cache',
          'user-key': zomatoUserKey }
