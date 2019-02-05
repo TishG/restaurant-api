@@ -4,7 +4,7 @@ main {
     background-image: url(https://images.unsplash.com/photo-1520066975094-c321ec00637d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(90%);
+    filter: brightness(92%);
 }
 
 .welcome-message h1 {
@@ -36,7 +36,6 @@ nav {
 
 .navbar-dark .navbar-toggler {
     border: none;
-    color: white;
 }
 
 #home-search-container {
@@ -44,12 +43,32 @@ nav {
     height: 746px;
 }
 
+/* search-box */
 .search-box {
     height: 35px;
-    max-height: 355px;
-    width: 400px;
-    max-width: 400px;
+    max-height: 35px;
 }
+
+@media (min-width: 576px) {
+.search-box {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin-top: 4px;
+    }
+}
+
+@media (max-width: 575px) {
+    .search-box {
+        margin-top: 0.5px;
+    }
+}
+
+input.form-control.mw-100.search-box.pl-2 {
+    width: 250px;
+    max-width: 250px;
+}
+/* search-box */
 
 .select-box {
     height: 35px;
@@ -58,13 +77,28 @@ nav {
     max-width: 100px;
 }
 
+/* submit */
 .submit {
     height: 35px;
-    max-height:35px;
+    max-height: 35px;
     background-color: lightgray;
     color: #A31932;
     border: 1px solid darkgray;
+    border-radius: 3px;
 }
+
+@media (min-width: 576px) {
+.submit {
+    margin-top: 3px;
+    }
+}
+
+@media (max-width: 575px) {
+    .submit {
+        margin-top: 0.5px;
+    }
+}
+/* submit */
 
 .back-button span, .back-button a {
     color: #B34257;
