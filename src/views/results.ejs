@@ -4,10 +4,11 @@
     <% include ./static/partials/head.ejs %>
   </head>
     <body>
-  <main>   
-      <% include ./static/partials/navbar.ejs %>
+        <% include ./static/partials/navbar.ejs %>
+  <main class="pt-1">   
+      <!-- <% include ./static/partials/navbar.ejs %> -->
 <section class="back-button-and-results-length-container">
-      <p class="back-button m-3"><a href="/"><span class="fas fa-arrow-left fa-md"></span> Back</a></p>    
+      <p class="back-button mt-1 ml-3"><a href="/"><span class="fas fa-arrow-left fa-md"></span> Back</a></p>    
       <p class="results-length d-flex justify-content-center text-white"><%=data['restaurants'].length %> results</p>
 </section> 
 <section class="results-container container d-flex justify-content-center">
