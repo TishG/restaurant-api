@@ -11,10 +11,13 @@ const normalizePort = (val) => {
     }
     return false;
   }
-const port = normalizePort(process.env.PORT || 3000);
+const port = normalizePort(process.env.PORT || 3001);
 app.set("port", port);
 server.listen(port);
 
-server.on("listening", () => {
-    console.log(`server is listening for requests on port ${server.address().port}`);
+server.on("listening", (err) => {
+  if(err) {
+    console.log(err);
+  }
+  else console.log(`server is listening for requests on port ${server.address().port}`);
   });
