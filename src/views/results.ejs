@@ -14,11 +14,32 @@
 <section class="results-container container d-flex justify-content-center">
   <ul>
   <% data['restaurants'].map(restaurant => { %>
-    <div style="background-color: #F6EAEC" class="card my-4">
-      <div class="container card-body mx-4 my-2">
+    <div style="background-color: #F6EAEC" class="card my-4 px-4">
+      <div class="container card-body mx-4 mb-2">
       <li class="restaurant-list">
+          <div class="d-flex justify-content-end ml-0">
+        <% if(restaurant['restaurant']['user_rating']['aggregate_rating'] >= 0.1 && restaurant['restaurant']['user_rating']['aggregate_rating'] <= 2.9 ) { %>
+          <p class="rating badge p-2" style="background-color: red; color: white"><%= restaurant['restaurant']['user_rating']['aggregate_rating'] %> - <span>Below Average</span></p>
+          <% } %>
+          <% if(restaurant['restaurant']['user_rating']['aggregate_rating'] >= 3.0 && restaurant['restaurant']['user_rating']['aggregate_rating'] <= 3.4 ) { %>
+            <p class="rating badge p-2" style="background-color: yellow;"><%= restaurant['restaurant']['user_rating']['aggregate_rating'] %> - <%= restaurant['restaurant']['user_rating']['rating_text'] %></p>
+          <% } %>
+          <% if(restaurant['restaurant']['user_rating']['aggregate_rating'] >= 3.5 && restaurant['restaurant']['user_rating']['aggregate_rating'] <= 3.9 ) { %>
+            <p class="rating badge p-2" style="background-color: lightGreen"><%= restaurant['restaurant']['user_rating']['aggregate_rating'] %> - <%= restaurant['restaurant']['user_rating']['rating_text'] %></p>
+            <% } %>
+          <% if(restaurant['restaurant']['user_rating']['aggregate_rating'] >= 4.0 && restaurant['restaurant']['user_rating']['aggregate_rating'] <= 4.9 ) { %>
+            <p class="rating badge p-2" style="background-color: green; color: white;"><%= restaurant['restaurant']['user_rating']['aggregate_rating'] %> - <%= restaurant['restaurant']['user_rating']['rating_text'] %></p>
+          <% } %>
+          <% if(restaurant['restaurant']['user_rating']['aggregate_rating'] == 5.0) { %>
+            <p class="rating badge p-2" style="background-color: darkgreen; color: white;"><%= restaurant['restaurant']['user_rating']['aggregate_rating'] %> - <%= restaurant['restaurant']['user_rating']['rating_text'] %></p>
+          <% } %>
+          <% if(restaurant['restaurant']['user_rating']['aggregate_rating'] == 0) { %>
+            <p class="rating badge p-2 bg-secondary text-white"><%= restaurant['restaurant']['user_rating']['aggregate_rating'] %> - <%= restaurant['restaurant']['user_rating']['rating_text'] %></p>
+          <% } %>
+          </div>
           <p class="restaurant-name"><%= restaurant['restaurant']['name'] %></p>
           <p class="restaurant-address text-secondary"><%= restaurant['restaurant']['location']['address'] %></p>
+          <a class="text-dark" href="<%= restaurant['restaurant']['menu_url'] %>">View Menu</a>
       </li>
     </div>
 </div>

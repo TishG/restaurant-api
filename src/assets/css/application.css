@@ -118,6 +118,10 @@ input.form-control.mw-100.search-box.pl-2 {
     font-size: 18px;
 }
 
+.rating { 
+    font-size: 20px;
+}
+
 .search-again a {
     /* color: #B34257; */
     color: lightgray;
