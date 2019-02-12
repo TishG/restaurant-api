@@ -1,6 +1,6 @@
 const request = require("request");
 const server = require("../../src/server");
-const homePage = "http://localhost:3001/home";
+const homePage = "http://localhost:3000/home";
 
 describe("routes : home", () => {
     it("should return a status code 200", (done) => {

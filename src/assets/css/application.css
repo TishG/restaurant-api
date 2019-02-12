@@ -21,15 +21,11 @@ html, body {
     background-image: url(https://images.unsplash.com/photo-1474400643734-8e92a2bdbc2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(92%); 
+    filter: brightness(85%); 
 }
 
-.landing-focus {
-    background-color: #DEABA7;
-    color: #A31932;
-    width: 200px;
-    height: 350px;
-    border-radius: 5px;
+.landing-welcome-message {
+    color: white;
 }
 
 .landing-buttons {

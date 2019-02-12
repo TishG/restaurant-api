@@ -6,13 +6,15 @@
     <body>
       <% include ./static/partials/navbar.ejs %>
       <main class="photo-2-background container-fluid" id="landing-container">
-        <div class="clanding-buttons-container ontainer text-center">
+        <h2 class="landing-welcome-message">Welcome to Restaurant API</h2> 
+        <h3 class="landing-welcome-message text-center">where you can search for places to dine</h3>
+        <div class="landing-buttons-container text-center pt-2">
         <a href="/users/sign_up"><button class="landing-buttons">Sign Up</button></a>
         <div class="d-flex justify-content-center">
         <hr>
         </div>
         <!-- <button class="landing-buttons"><a class="landing-buttons" href="/users/sign_up">Sign In</a></button> -->
-        <a href=""><button class="landing-buttons">Sign In</button></a>
+        <a href="/users/sign_in"><button class="landing-buttons">Sign In</button></a>
         </div>
       </main>        
       <% include ./static/partials/baseScripts.ejs %>
