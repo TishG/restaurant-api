@@ -1,10 +1,61 @@
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 
-main {
+html, body {
+    height: 100%;
+  }
+/* main {
     background-image: url(https://images.unsplash.com/photo-1520066975094-c321ec00637d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(92%);
+} */
+
+.photo-1-background {
+    background-image: url(https://images.unsplash.com/photo-1520066975094-c321ec00637d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(92%); 
+}
+
+.photo-2-background {
+    background-image: url(https://images.unsplash.com/photo-1474400643734-8e92a2bdbc2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(92%); 
+}
+
+.landing-focus {
+    background-color: #DEABA7;
+    color: #A31932;
+    width: 200px;
+    height: 350px;
+    border-radius: 5px;
+}
+
+.landing-buttons {
+    background-color: #DEABA7;
+    color: #A31932;
+    height: 40px;
+    width: 200px;  
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.no-results {
+    background-color: #DEABA7;
+    background-size: cover;
+    height: 743px;
+    color: #A31932;
+}
+
+.sign-up-title, label, .home-link-on-sign-up-page {
+    color: #A31932;
+}
+
+.sign-up-container {
+    background-color: #DEABA7;
+    background-size: cover;
+    height: 743px;
 }
 
 .welcome-message h1 {
@@ -39,6 +90,11 @@ nav {
 }
 
 #home-search-container {
+    padding: 20%;
+    height: 746px;
+}
+
+#landing-container {
     padding: 20%;
     height: 746px;
 }
@@ -116,10 +172,6 @@ input.form-control.mw-100.search-box.pl-2 {
 
 .restaurant-name {
     font-size: 18px;
-}
-
-.rating { 
-    font-size: 20px;
 }
 
 .search-again a {

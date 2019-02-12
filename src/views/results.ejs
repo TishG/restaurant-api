@@ -5,10 +5,10 @@
   </head>
     <body>
         <% include ./static/partials/navbar.ejs %>
-  <main class="pt-1">   
-      <!-- <% include ./static/partials/navbar.ejs %> -->
+  <% if(data['restaurants'].length != 0) { %> 
+  <main class="photo-1-background pt-1"> 
 <section class="back-button-and-results-length-container">
-      <p class="back-button mt-1 ml-3"><a href="/"><span class="fas fa-arrow-left fa-md"></span> Back</a></p>    
+      <p class="back-button mt-1 ml-3"><a href="/home"><span class="fas fa-arrow-left fa-md"></span> Back</a></p>     
       <p class="results-length d-flex justify-content-center text-white"><%=data['restaurants'].length %> results</p>
 </section> 
 <section class="results-container container d-flex justify-content-center">
@@ -45,11 +45,17 @@
 </div>
   <% }) %>
   </ul>
-</section>   
+</section>
 <section class="search-again pb-1">
-    <p class="m-1 ml-3 text-center"><a href="/"></span> Search Again</a></p>    
+    <p class="m-1 ml-3 text-center"><a href="/home"></span> Search Again</a></p>    
 </section> 
 </main> 
+<% } else { %>
+<main class="container-fluid no-results text-center">
+    <h1 class="text-dark">Sorry, results are unable to be viewed.</h1>
+    <p class="m-1 ml-3 text-center"><a href="/home"></span> Return Home</a></p>   
+</main>
+<% } %>
         <% include ./static/partials/baseScripts.ejs %>
     </body>
 </html>
