@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./static/partials/head.ejs %>
+  </head>
+    <body>
+      <% include ./static/partials/navbar.ejs %>
+      <main class="photo-2-background container-fluid" id="landing-container">
+        <div class="clanding-buttons-container ontainer text-center">
+        <a href="/users/sign_up"><button class="landing-buttons">Sign Up</button></a>
+        <div class="d-flex justify-content-center">
+        <hr>
+        </div>
+        <!-- <button class="landing-buttons"><a class="landing-buttons" href="/users/sign_up">Sign In</a></button> -->
+        <a href=""><button class="landing-buttons">Sign In</button></a>
+        </div>
+      </main>        
+      <% include ./static/partials/baseScripts.ejs %>
+    </body>
+</html>
