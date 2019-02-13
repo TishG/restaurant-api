@@ -7,7 +7,6 @@ module.exports = {
         const resultsRoutes = require("../routes/results");
         app.use(resultsRoutes);
         const userRoutes = require("../routes/users");
-        app.use(userRoutes);
-        
+        app.use(userRoutes);  
     }
 }
