@@ -26,6 +26,7 @@ html, body {
 
 .landing-welcome-message {
     color: white;
+    text-shadow: 0.4px 1px grey;
 }
 
 .landing-buttons {
@@ -37,6 +38,26 @@ html, body {
     font-weight: bold;
 }
 
+.google-button {
+    background-color:#d34836;
+    border: none;
+}
+
+.google-link:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.facebook-button {
+    background-color:#3b5998;
+    border: none;
+}
+
+.facebook-link:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .no-results {
     background-color: #DEABA7;
     background-size: cover;
@@ -46,6 +67,11 @@ html, body {
 
 .sign-up-title, label, .home-link-on-sign-up-page {
     color: #A31932;
+}
+
+.home-link-on-sign-up-page:hover {
+    color: #A31932;
+    font-weight: bold; 
 }
 
 .sign-up-container {
