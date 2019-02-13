@@ -23,9 +23,11 @@
             <div class="d-flex justify-content-end">
               <button type="submit" class="submit">Sign in</button>
             </div>
-            <div class="d-flex justify-content-center mt-5">
-              <button type="button"><a href="/users/google">Sign In with Google</a></button>
-              <button type="button" class="ml-2"><a href="/users/facebook">Sign In with Facebook</a></button>
+            <div class="d-flex justify-content-center flex-wrap mt-4">
+              <!-- <button type="button" class="google-button p-1 px-2"><a href="/users/google" class="google-link text-white">Sign In with Google</a></button> -->
+              <a href="/users/google" class="google-link"><button type="button" class="google-button mt-1 p-1 px-2 text-white">Sign In with Google</button></a>
+              <!-- <button type="button" class="ml-1 p-1 px-2 facebook-button"><a href="/users/facebook" class="facebook-link text-white">Sign In with Facebook</a></button> -->
+              <a href="/users/facebook" class="facebook-link"><button type="button" class="mt-1 ml-0 ml-sm-1 p-1 px-2 facebook-button text-white">Sign In with Facebook</button></a>
             </div>
 
           </form>
