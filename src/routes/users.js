@@ -7,11 +7,7 @@ const passport = require("passport");
 router.get("/users/sign_up", userController.signUp);
 router.post("/users", validation.validateUsers, userController.create);
 router.get("/users/sign_in", userController.signInForm);
-// router.post("/users/sign_in", userController.signIn);
-router.post("/users/sign_in", passport.authenticate('local', { successRedirect: '/home',
-failureRedirect: '/',
-failureFlash: true })
-);
+router.post("/users/sign_in", userController.signIn);
 router.get("/users/sign_out", userController.signOut);
 
 module.exports = router;

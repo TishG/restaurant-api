@@ -13,7 +13,6 @@ module.exports = {
              passwordConfirmation: req.body.passwordConfirmation
            };
            userQueries.createUser(newUser, (err, user) => {
-             console.log(newUser);
              if(err){
                req.flash("error", err);
                res.redirect("/users/sign_up");
@@ -29,10 +28,15 @@ module.exports = {
           res.render("users/sign_in");
         },
         signIn(req, res, next){
-          passport.authenticate('local', { 
-            successRedirect: '/home',
-            failureRedirect: '/',
-            failureFlash: true })
+          passport.authenticate('local', function(user, info) {
+console.log('-----------------', user, info)
+            // if (err) { return next(err); }
+            if (!user) { return res.redirect('/users/sign_up'); }
+            req.logIn(user, function(err) {
+              if (err) { return next(err); }
+              return res.redirect('/home');
+            });
+          })(req, res, next);
           // passport.authenticate("local")(req, res, function () {
             // passport.authenticate("local")(req, res, () => {
             // if(!req.user){
