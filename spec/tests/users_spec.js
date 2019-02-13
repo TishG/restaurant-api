@@ -96,14 +96,4 @@ describe("routes : users", () => {
               });
             }); 
           });
-
-          describe("GET /users/sign_out", () => {
-
-            it("should sign the user out and return to home", (done) => {
-              request.get(`${landing}sign_out`, (err, res, body) => {
-                expect(res.statusCode).toBe(200);
-                done();
-              });
-            }); 
-          });
   });
