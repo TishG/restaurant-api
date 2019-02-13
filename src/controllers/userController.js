@@ -29,6 +29,10 @@ module.exports = {
           res.render("users/sign_in");
         },
         signIn(req, res, next){
+          passport.authenticate('local', { 
+            successRedirect: '/home',
+            failureRedirect: '/',
+            failureFlash: true })
           // passport.authenticate("local")(req, res, function () {
             // passport.authenticate("local")(req, res, () => {
             // if(!req.user){
