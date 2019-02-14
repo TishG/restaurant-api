@@ -36,27 +36,27 @@ module.exports = {
             });
           })(req, res, next);
         },
-        googleSignInMethodOne(req, res, next) {
-          passport.authenticate('google', { 
-            scope: ['https://www.googleapis.com/auth/plus.login'] 
-           })
-          },
-        googleSignInMethodTwo(req, res, next) {
-          passport.authenticate('google', { 
-            failureRedirect: '/users/sign_in' 
-          }),
-            (req, res) => {
-                res.redirect('/home');
-            }
-        },
-        facebookSignInMethodOne(req, res, next) {
-          passport.authenticate('facebook')
-        },
-        facebookSignInMethodTwo(req, res, next) {
-          passport.authenticate('facebook', { 
-          successRedirect: '/home',
-          failureRedirect: '/' })
-        },
+        // googleSignInMethodOne(req, res, next) {
+        //   passport.authenticate('google', { 
+        //     scope: ['https://www.googleapis.com/auth/plus.login'] 
+        //    })
+        //   },
+        // googleSignInMethodTwo(req, res, next) {
+        //   passport.authenticate('google', { 
+        //     failureRedirect: '/users/sign_in' 
+        //   }),
+        //     (req, res) => {
+        //         res.redirect('/home');
+        //     }
+        // },
+        // facebookSignInMethodOne(req, res, next) {
+        //   passport.authenticate('facebook')
+        // },
+        // facebookSignInMethodTwo(req, res, next) {
+        //   passport.authenticate('facebook', { 
+        //   successRedirect: '/home',
+        //   failureRedirect: '/' })
+        // },
         signOut(req, res, next){
           req.logout();
           req.flash("notice", "You've successfully signed out!");
