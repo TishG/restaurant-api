@@ -65,11 +65,11 @@ html, body {
     color: #A31932;
 }
 
-.sign-up-title, label, .home-link-on-sign-up-page {
+.sign-up-title, label, .return-link{
     color: #A31932;
 }
 
-.home-link-on-sign-up-page:hover {
+.return-link:hover {
     color: #A31932;
     font-weight: bold; 
 }
